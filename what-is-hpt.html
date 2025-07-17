@@ -25,13 +25,10 @@
 
         <h2>Definition of HPT</h2>
         <p>
-          Human Performance Technology (HPT) is a systematic approach to
-          improving productivity and competence, using a set of methods and
-          procedures that realize the potential of people in the workplace. HPT
-          is a field of study and practice that uses a systematic approach to
-          analyze and improve human performance in organizations through the
-          application of proven principles of instructional design, measurement,
-          and management.
+          Human Performance Technology (HPT) is the systematic process of
+          identifying performance gaps and implementing interventions to achieve
+          performance improvements by increasing productivity, improving
+          quality, or reacting to business opportunities.
         </p>
 
         <p>
@@ -110,6 +107,26 @@
               various organizational levels.
             </p>
           </div>
+        </div>
+
+        <!-- View Detailed Standards Button -->
+        <div style="text-align: center; padding: 2rem">
+          <button
+            id="viewStandardsBtn"
+            style="
+              background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+              color: white;
+              border: none;
+              padding: 1rem 2rem;
+              border-radius: 25px;
+              font-size: 1rem;
+              cursor: pointer;
+              transition: all 0.3s ease;
+              box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            "
+          >
+            View Detailed ISPI Standards
+          </button>
         </div>
 
         <div class="job-aid">
@@ -235,6 +252,238 @@
         card.addEventListener("mouseleave", function () {
           this.style.transform = "translateY(0) scale(1)";
         });
+      });
+
+      // ISPI Standards Modal functionality
+      const viewStandardsBtn = document.getElementById("viewStandardsBtn");
+
+      viewStandardsBtn.addEventListener("mouseenter", function () {
+        this.style.transform = "translateY(-2px)";
+        this.style.boxShadow = "0 6px 20px rgba(0,0,0,0.3)";
+      });
+
+      viewStandardsBtn.addEventListener("mouseleave", function () {
+        this.style.transform = "translateY(0)";
+        this.style.boxShadow = "0 4px 15px rgba(0,0,0,0.2)";
+      });
+
+      viewStandardsBtn.addEventListener("click", function () {
+        // Create ISPI Standards modal
+        const modal = document.createElement("div");
+        modal.style.cssText = `
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0,0,0,0.8);
+                z-index: 1000;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                animation: fadeIn 0.3s ease;
+            `;
+
+        const modalContent = document.createElement("div");
+        modalContent.style.cssText = `
+                background: white;
+                border-radius: 15px;
+                padding: 2rem;
+                max-width: 95%;
+                max-height: 90%;
+                overflow-y: auto;
+                position: relative;
+                box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+                width: 1000px;
+            `;
+
+        modalContent.innerHTML = `
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; border-bottom: 3px solid #3498db; padding-bottom: 1rem;">
+                    <h2 style="color: #2c3e50; margin: 0; font-size: 1.8rem;">ISPI Professional Standards</h2>
+                    <button id="closeModal" style="background: #e74c3c; color: white; border: none; padding: 0.8rem 1.2rem; border-radius: 50%; cursor: pointer; font-size: 1.5rem; line-height: 1;">×</button>
+                </div>
+                
+                <div style="margin-bottom: 2rem; background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%); padding: 1.5rem; border-radius: 10px; border-left: 4px solid #2196f3;">
+                    <p style="margin: 0; font-style: italic; color: #1565c0;">
+                        The International Society for Performance Improvement (ISPI) has established comprehensive standards that define the knowledge, skills, and competencies required for effective HPT practice. These standards ensure consistency and excellence across the profession.
+                    </p>
+                </div>
+
+                <div class="standards-container">
+                    <!-- Performance Analysis Standards -->
+                    <div style="margin-bottom: 2.5rem; border: 2px solid #4caf50; border-radius: 15px; overflow: hidden;">
+                        <div style="background: linear-gradient(135deg, #4caf50 0%, #66bb6a 100%); color: white; padding: 1.5rem;">
+                            <h3 style="margin: 0; font-size: 1.4rem;">1. Performance Analysis Standards</h3>
+                            <p style="margin: 0.5rem 0 0 0; opacity: 0.9;">Systematic identification and analysis of performance gaps</p>
+                        </div>
+                        <div style="padding: 1.5rem; background: #f8f9fa;">
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem;">
+                                <div style="background: white; padding: 1rem; border-radius: 8px; border-left: 4px solid #4caf50;">
+                                    <h4 style="color: #2c3e50; margin: 0 0 0.5rem 0;">Needs Assessment</h4>
+                                    <p style="margin: 0; font-size: 0.9rem; color: #555;">Ability to systematically determine gaps between current and desired performance states</p>
+                                </div>
+                                <div style="background: white; padding: 1rem; border-radius: 8px; border-left: 4px solid #4caf50;">
+                                    <h4 style="color: #2c3e50; margin: 0 0 0.5rem 0;">Cause Analysis</h4>
+                                    <p style="margin: 0; font-size: 0.9rem; color: #555;">Skill in identifying root causes of performance problems using systematic methodologies</p>
+                                </div>
+                                <div style="background: white; padding: 1rem; border-radius: 8px; border-left: 4px solid #4caf50;">
+                                    <h4 style="color: #2c3e50; margin: 0 0 0.5rem 0;">Environmental Analysis</h4>
+                                    <p style="margin: 0; font-size: 0.9rem; color: #555;">Understanding of organizational factors that influence performance</p>
+                                </div>
+                                <div style="background: white; padding: 1rem; border-radius: 8px; border-left: 4px solid #4caf50;">
+                                    <h4 style="color: #2c3e50; margin: 0 0 0.5rem 0;">Gap Analysis</h4>
+                                    <p style="margin: 0; font-size: 0.9rem; color: #555;">Competency in measuring and quantifying performance differences</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Intervention Design Standards -->
+                    <div style="margin-bottom: 2.5rem; border: 2px solid #ff9800; border-radius: 15px; overflow: hidden;">
+                        <div style="background: linear-gradient(135deg, #ff9800 0%, #ffb74d 100%); color: white; padding: 1.5rem;">
+                            <h3 style="margin: 0; font-size: 1.4rem;">2. Intervention Design Standards</h3>
+                            <p style="margin: 0.5rem 0 0 0; opacity: 0.9;">Design and development of performance solutions</p>
+                        </div>
+                        <div style="padding: 1.5rem; background: #f8f9fa;">
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem;">
+                                <div style="background: white; padding: 1rem; border-radius: 8px; border-left: 4px solid #ff9800;">
+                                    <h4 style="color: #2c3e50; margin: 0 0 0.5rem 0;">Instructional Design</h4>
+                                    <p style="margin: 0; font-size: 0.9rem; color: #555;">Expertise in creating learning experiences that address skill and knowledge gaps</p>
+                                </div>
+                                <div style="background: white; padding: 1rem; border-radius: 8px; border-left: 4px solid #ff9800;">
+                                    <h4 style="color: #2c3e50; margin: 0 0 0.5rem 0;">Non-Instructional Solutions</h4>
+                                    <p style="margin: 0; font-size: 0.9rem; color: #555;">Ability to design environmental and motivational interventions</p>
+                                </div>
+                                <div style="background: white; padding: 1rem; border-radius: 8px; border-left: 4px solid #ff9800;">
+                                    <h4 style="color: #2c3e50; margin: 0 0 0.5rem 0;">Change Management</h4>
+                                    <p style="margin: 0; font-size: 0.9rem; color: #555;">Knowledge of organizational change principles and implementation strategies</p>
+                                </div>
+                                <div style="background: white; padding: 1rem; border-radius: 8px; border-left: 4px solid #ff9800;">
+                                    <h4 style="color: #2c3e50; margin: 0 0 0.5rem 0;">Solution Selection</h4>
+                                    <p style="margin: 0; font-size: 0.9rem; color: #555;">Skill in choosing appropriate interventions based on cause analysis results</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Evaluation Standards -->
+                    <div style="margin-bottom: 2.5rem; border: 2px solid #9c27b0; border-radius: 15px; overflow: hidden;">
+                        <div style="background: linear-gradient(135deg, #9c28b0 0%, #ba68c8 100%); color: white; padding: 1.5rem;">
+                            <h3 style="margin: 0; font-size: 1.4rem; color: #F3FFF9;">3. Evaluation Standards</h3>
+                            <p style="margin: 0.5rem 0 0 0; opacity: 0.9;color: #F3FFF9;">Measurement and assessment of intervention effectiveness</p>
+                        </div>
+                        <div style="padding: 1.5rem; background: #f8f9fa;">
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem;">
+                                <div style="background: white; padding: 1rem; border-radius: 8px; border-left: 4px solid #9c27b0;">
+                                    <h4 style="color: #2c3e50; margin: 0 0 0.5rem 0;">Evaluation Design</h4>
+                                    <p style="margin: 0; font-size: 0.9rem; color: #555;">Ability to create comprehensive evaluation strategies and methodologies</p>
+                                </div>
+                                <div style="background: white; padding: 1rem; border-radius: 8px; border-left: 4px solid #9c27b0;">
+                                    <h4 style="color: #2c3e50; margin: 0 0 0.5rem 0;">Data Collection</h4>
+                                    <p style="margin: 0; font-size: 0.9rem; color: #555;">Expertise in gathering quantitative and qualitative performance data</p>
+                                </div>
+                                <div style="background: white; padding: 1rem; border-radius: 8px; border-left: 4px solid #9c27b0;">
+                                    <h4 style="color: #2c3e50; margin: 0 0 0.5rem 0;">ROI Analysis</h4>
+                                    <p style="margin: 0; font-size: 0.9rem; color: #555;">Skill in calculating return on investment and demonstrating business impact</p>
+                                </div>
+                                <div style="background: white; padding: 1rem; border-radius: 8px; border-left: 4px solid #9c27b0;">
+                                    <h4 style="color: #2c3e50; margin: 0 0 0.5rem 0;">Results Interpretation</h4>
+                                    <p style="margin: 0; font-size: 0.9rem; color: #555;">Competency in analyzing data and drawing meaningful conclusions</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Management Standards -->
+                    <div style="margin-bottom: 1rem; border: 2px solid #f44336; border-radius: 15px; overflow: hidden;">
+                        <div style="background: linear-gradient(135deg, #f44336 0%, #ef5350 100%); color: white; padding: 1.5rem;">
+                            <h3 style="margin: 0; font-size: 1.4rem;color: #441C19;">4. Management Standards</h3>
+                            <p style="margin: 0.5rem 0 0 0; opacity: 0.9;color: #441C19">Project and initiative leadership capabilities</p>
+                        </div>
+                        <div style="padding: 1.5rem; background: #f8f9fa;">
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem;">
+                                <div style="background: white; padding: 1rem; border-radius: 8px; border-left: 4px solid #f44336;">
+                                    <h4 style="color: #2c3e50; margin: 0 0 0.5rem 0;">Project Planning</h4>
+                                    <p style="margin: 0; font-size: 0.9rem; color: #555;">Ability to develop comprehensive project plans and timelines</p>
+                                </div>
+                                <div style="background: white; padding: 1rem; border-radius: 8px; border-left: 4px solid #f44336;">
+                                    <h4 style="color: #2c3e50; margin: 0 0 0.5rem 0;">Resource Allocation</h4>
+                                    <p style="margin: 0; font-size: 0.9rem; color: #555;">Skill in managing budgets, personnel, and other project resources</p>
+                                </div>
+                                <div style="background: white; padding: 1rem; border-radius: 8px; border-left: 4px solid #f44336;">
+                                    <h4 style="color: #2c3e50; margin: 0 0 0.5rem 0;">Stakeholder Management</h4>
+                                    <p style="margin: 0; font-size: 0.9rem; color: #555;">Expertise in building relationships and managing diverse stakeholder needs</p>
+                                </div>
+                                <div style="background: white; padding: 1rem; border-radius: 8px; border-left: 4px solid #f44336;">
+                                    <h4 style="color: #2c3e50; margin: 0 0 0.5rem 0;">Communication</h4>
+                                    <p style="margin: 0; font-size: 0.9rem; color: #555;">Ability to effectively communicate results and recommendations to all organizational levels</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%); padding: 1.5rem; border-radius: 10px; margin-top: 2rem; border-left: 4px solid #ffc107;">
+                    <h3 style="color: #2c3e50; margin-top: 0;">💡 Professional Development</h3>
+                    <p style="margin-bottom: 0.5rem;"><strong>Certification Path:</strong> ISPI offers the Certified Performance Technologist (CPT) credential</p>
+                    <p style="margin-bottom: 0.5rem;"><strong>Continuing Education:</strong> Annual professional development requirements maintain certification</p>
+                    <p style="margin-bottom: 0;"><strong>Community:</strong> Access to global network of HPT professionals and resources</p>
+                </div>
+            `;
+
+        modal.appendChild(modalContent);
+        document.body.appendChild(modal);
+
+        // Close modal functionality
+        const closeBtn = modal.querySelector("#closeModal");
+        closeBtn.addEventListener("click", function () {
+          document.body.removeChild(modal);
+        });
+
+        closeBtn.addEventListener("mouseenter", function () {
+          this.style.background = "#c62828";
+          this.style.transform = "scale(1.1)";
+        });
+
+        closeBtn.addEventListener("mouseleave", function () {
+          this.style.background = "#e74c3c";
+          this.style.transform = "scale(1)";
+        });
+
+        // Close modal when clicking outside
+        modal.addEventListener("click", function (e) {
+          if (e.target === modal) {
+            document.body.removeChild(modal);
+          }
+        });
+
+        // Close modal with Escape key
+        const escapeHandler = function (e) {
+          if (e.key === "Escape" && document.body.contains(modal)) {
+            document.body.removeChild(modal);
+            document.removeEventListener("keydown", escapeHandler);
+          }
+        };
+        document.addEventListener("keydown", escapeHandler);
+
+        // Add animation to standards cards
+        setTimeout(() => {
+          const standardsCards = modal.querySelectorAll(
+            ".standards-container > div"
+          );
+          standardsCards.forEach((card, index) => {
+            card.style.opacity = "0";
+            card.style.transform = "translateY(20px)";
+            card.style.transition = `opacity 0.4s ease ${
+              index * 0.1
+            }s, transform 0.4s ease ${index * 0.1}s`;
+
+            setTimeout(() => {
+              card.style.opacity = "1";
+              card.style.transform = "translateY(0)";
+            }, index * 100);
+          });
+        }, 100);
       });
     </script>
     <script src="mobile-nav.js"></script>

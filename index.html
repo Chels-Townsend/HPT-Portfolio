@@ -31,7 +31,7 @@
             />
             <!-- Contact information moved here under the profile picture -->
             <div class="contact-info">
-              <h3>Contact Information</h3>
+              <h3>Professional Contact Information</h3>
               <p>
                 <strong>Email:</strong>
                 <a href="mailto:clt8560@uncw.edu" class="contact-info-link"
@@ -54,24 +54,25 @@
           <div class="profile-content">
             <h2>Welcome to My HPT Portfolio</h2>
             <p>
-              Welcome to my Human Performance Technology professional portfolio.
+              This website is meant to serve as a comprehensive resource for
+              students, scholars, and professionals interested in exploring the
+              field of Human Performance Technology. Through my academic journey
+              and practical experience, I have developed a deep appreciation for
+              the systematic approach that HPT provides in addressing
+              performance gaps and enhancing organizational effectiveness.
             </p>
-
-            <p>
-              This website serves as a comprehensive resource for students,
-              scholars, and professionals interested in exploring the field of
-              Human Performance Technology. Through my academic journey and
-              practical experience, I have developed a deep appreciation for the
-              systematic approach that HPT provides in addressing performance
-              gaps and enhancing organizational effectiveness.
-            </p>
-
             <p>
               I believe that HPT represents the future of performance
               improvement, combining scientific rigor with practical application
               to create meaningful change in individuals and organizations. My
-              commitment to this field drives me to continuously learn,
-              research, and share knowledge with the broader HPT community.
+              particular interest in technology in education has deepened my
+              appreciation for how innovative tools and digital solutions can
+              enhance learning outcomes and streamline performance
+              interventions. My commitment to this field drives me to
+              continuously learn, research, and share knowledge with the broader
+              HPT community, especially exploring how emerging educational
+              technologies can advance human performance in both academic and
+              workplace settings.
             </p>
           </div>
         </div>
@@ -102,11 +103,11 @@
 
         <h2>About This Website and Its Purpose</h2>
         <p>
-          This professional portfolio website serves as a comprehensive resource
-          for understanding Human Performance Technology and its applications.
-          The site was developed as part of my academic coursework and
-          professional development in HPT, designed to serve students, scholars,
-          and professionals interested in exploring this dynamic field.
+          This portfolio website serves as a comprehensive resource for
+          understanding Human Performance Technology and its applications. The
+          site was developed as part of my academic coursework and professional
+          development in HPT, designed to serve students, scholars, and
+          professionals interested in exploring this dynamic field.
         </p>
 
         <p>
@@ -173,19 +174,11 @@
           community and my ongoing journey as a practitioner and scholar in this
           field.
         </p>
-
-        <div class="source-credit">
-          <p>
-            <strong>Image Sources:</strong> Professional education and workplace
-            imagery sourced from Unsplash.com - Free stock photography for
-            educational use under Creative Commons license
-          </p>
-        </div>
       </div>
 
       <footer>
         <div class="footer-content">
-          <h3>HPT Professional Portfolio</h3>
+          <h3>Chelsea Townsend HPT Portfolio</h3>
           <p>
             Dedicated to advancing Human Performance Technology through
             systematic analysis and evidence-based interventions.
@@ -201,24 +194,12 @@
 
           <div class="footer-social">
             <a
-              href="https://www.linkedin.com/in/yourprofile"
+              href="https://www.linkedin.com/in/chelsea-townsend-29b940105/"
               target="_blank"
               title="LinkedIn"
               >in</a
             >
-            <a
-              href="https://twitter.com/yourhandle"
-              target="_blank"
-              title="Twitter"
-              >𝕏</a
-            >
-            <a
-              href="https://www.facebook.com/yourprofile"
-              target="_blank"
-              title="Facebook"
-              >f</a
-            >
-            <a href="mailto:your.email@university.edu" title="Email">@</a>
+            <a href="mailto:clt8560@uncw.edu" title="Email">@</a>
           </div>
 
           <p>&copy; 2025 HPT Professional Portfolio. All rights reserved.</p>
@@ -229,14 +210,8 @@
     <script src="mobile-nav.js"></script>
     <script>
       // Add some interactive elements
-      const profileImage = document.querySelector(".profile-image img");
       const socialLinks = document.querySelectorAll(".social-links a");
       const statCards = document.querySelectorAll(".stat-card");
-
-      // Profile image hover effect
-      profileImage.addEventListener("mouseenter", function () {
-        this.style.transform = "scale(1.1)";
-      });
 
       profileImage.addEventListener("mouseleave", function () {
         this.style.transform = "scale(1)";
@@ -251,26 +226,6 @@
         link.addEventListener("mouseleave", function () {
           this.style.transform = "translateY(0) scale(1)";
         });
-      });
-
-      // Stats cards animation
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.style.opacity = "1";
-              entry.target.style.transform = "translateY(0)";
-            }
-          });
-        },
-        { threshold: 0.1 }
-      );
-
-      statCards.forEach((card) => {
-        card.style.opacity = "0";
-        card.style.transform = "translateY(20px)";
-        card.style.transition = "opacity 0.6s ease, transform 0.6s ease";
-        observer.observe(card);
       });
     </script>
   </body>

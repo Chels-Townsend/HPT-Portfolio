@@ -608,7 +608,86 @@ footer {
   background: rgba(255, 255, 255, 0.2);
   transform: translateY(-2px);
 }
+/* ==================== MODEL BUTTON STYLES ==================== */
+/* Add these styles to your existing styles.css file */
 
+.model-button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  transition: all 0.3s ease;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.model-button:focus {
+  outline: 3px solid #3498db;
+  outline-offset: 2px;
+}
+
+.model-button .model-card {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.model-button:hover .model-card {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.model-button:active .model-card {
+  transform: translateY(-5px) scale(0.98);
+  transition: transform 0.1s ease;
+}
+
+/* Model metadata styling */
+.model-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e0e0e0;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.model-year {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-weight: 500;
+  font-size: 0.8rem;
+}
+
+.model-focus {
+  background: #f8f9fa;
+  color: #2c3e50;
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-weight: 500;
+  font-size: 0.8rem;
+  border: 1px solid #e0e0e0;
+}
+
+/* Responsive adjustments for model buttons */
+@media (max-width: 768px) {
+  .model-button .model-card {
+    padding: 1.5rem;
+  }
+
+  .model-meta {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+  }
+}
 /* ==================== RESPONSIVE DESIGN ==================== */
 @media (max-width: 768px) {
   .profile-section {
