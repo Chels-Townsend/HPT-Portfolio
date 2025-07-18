@@ -24,11 +24,6 @@
   object-fit: cover;
   border: 6px solid white;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease;
-}
-
-.profile-image img:hover {
-  transform: scale(1.05);
 }
 
 .profile-content {
@@ -49,13 +44,10 @@
 .contact-info-link {
   text-decoration: none;
   color: inherit;
-  display: block;
-  transition: transform 0.3s ease;
 }
 
 .contact-info-link:hover {
   transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
 .social-links {
@@ -66,7 +58,6 @@
 }
 
 .social-links a {
-  display: inline-block;
   width: 50px;
   height: 50px;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -92,6 +83,7 @@
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 2rem;
   margin: 2rem 0;
+  grid-auto-rows: 1fr; /* Make all rows the same height */
 }
 
 .model-card {
@@ -101,16 +93,35 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
   border: 1px solid #e0e0e0;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
+
+.model-card h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+  min-height: 2.6em; /* Accommodate 2 lines of text */
+}
+
+.model-card p {
+  flex-grow: 1;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+  display: flex;
+  align-items: flex-start;
+}
+
+/* Non-interactive model cards (for What is HPT page) */
 .model-card-wih {
   background: white;
   border-radius: 15px;
   padding: 2rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-  border: 1px solid #e0e0e0;
-  transform: none !important;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
+  border: 1px solid #e0e0e0;
+  transform: none !important; /* Prevent hover effects */
 }
 
 .model-card:hover {
@@ -118,7 +129,53 @@
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
 
-/* ==================== CLICKABLE MODEL CARDS ==================== */
+/* ==================== MODEL BUTTON STYLES ==================== */
+.model-button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  transition: all 0.3s ease;
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.model-button:focus {
+  outline: 3px solid #3498db;
+  outline-offset: 2px;
+}
+
+.model-button .model-card {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.model-button:hover .model-card {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.model-button:hover .model-card::before {
+  transform: translateX(0);
+}
+
+.model-button:active .model-card {
+  transform: translateY(-5px) scale(0.98);
+  transition: transform 0.1s ease;
+}
+
+/* ==================== CLICKABLE MODEL CARDS (for Home page) ==================== */
 .model-card-link {
   text-decoration: none;
   color: inherit;
@@ -126,12 +183,9 @@
   transition: transform 0.3s ease;
 }
 
-.model-card-link:hover {
-  text-decoration: none;
-  color: inherit;
-}
-
+.model-card-link:hover,
 .model-card-link:visited {
+  text-decoration: none;
   color: inherit;
 }
 
@@ -173,7 +227,39 @@
   transition: transform 0.1s ease;
 }
 
-/* ==================== SPECIAL COMPONENTS ==================== */
+/* ==================== MODEL METADATA ==================== */
+.model-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid #e0e0e0;
+  font-size: 0.85rem;
+  color: #666;
+  flex-shrink: 0;
+}
+
+.model-year {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-weight: 500;
+  font-size: 0.8rem;
+}
+
+.model-focus {
+  background: #f8f9fa;
+  color: #2c3e50;
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-weight: 500;
+  font-size: 0.8rem;
+  border: 1px solid #e0e0e0;
+}
+
+/* ==================== OTHER COMPONENTS ==================== */
 .case-analysis {
   background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
   border-radius: 15px;
@@ -241,25 +327,7 @@
   opacity: 0.9;
 }
 
-/* ==================== RESPONSIVE DESIGN ==================== */
-@media (max-width: 768px) {
-  .profile-section {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  .model-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .glossary-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* ==================== SPECIAL BOXES AND SECTIONS ==================== */
-/* File: special-boxes.css - Highlight boxes, job aids, and special content areas */
-
+/* ==================== SPECIAL BOXES ==================== */
 .highlight-box {
   background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
   border: 1px solid #ffc107;
@@ -313,78 +381,29 @@
   margin-bottom: 1rem;
 }
 
-/* ==================== BUTTON STYLES ==================== */
-/* File: buttons.css - All button styles and interactive elements */
-
-/* ==================== MODEL BUTTON STYLES ==================== */
-.model-button {
-  background: none;
-  border: none;
-  padding: 0;
-  margin: 0;
-  cursor: pointer;
-  width: 100%;
-  text-align: left;
-  transition: all 0.3s ease;
-  border-radius: 15px;
-  overflow: hidden;
-}
-
-.model-button:focus {
-  outline: 3px solid #3498db;
-  outline-offset: 2px;
-}
-
-.model-button .model-card {
-  position: relative;
-  overflow: hidden;
-  transition: all 0.3s ease;
-}
-
-.model-button:hover .model-card::before {
-  transform: translateX(0);
-}
-
-.model-button:active .model-card {
-  transform: translateY(-5px) scale(0.98);
-  transition: transform 0.1s ease;
-}
-
-/* ==================== MODEL METADATA ==================== */
-.model-meta {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 1rem;
-  padding-top: 1rem;
-  border-top: 1px solid #e0e0e0;
-  font-size: 0.85rem;
-  color: #666;
-}
-
-.model-year {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
-  padding: 0.3rem 0.8rem;
-  border-radius: 15px;
-  font-weight: 500;
-  font-size: 0.8rem;
-}
-
-.model-focus {
-  background: #f8f9fa;
-  color: #2c3e50;
-  padding: 0.3rem 0.8rem;
-  border-radius: 15px;
-  font-weight: 500;
-  font-size: 0.8rem;
-  border: 1px solid #e0e0e0;
-}
-
-/* ==================== RESPONSIVE BUTTON ADJUSTMENTS ==================== */
+/* ==================== RESPONSIVE DESIGN ==================== */
 @media (max-width: 768px) {
-  .model-button .model-card {
+  .profile-section {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .model-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .model-card {
+    min-height: 250px;
     padding: 1.5rem;
+  }
+
+  .model-card h3 {
+    min-height: auto;
+  }
+
+  .glossary-grid {
+    grid-template-columns: 1fr;
   }
 
   .model-meta {
