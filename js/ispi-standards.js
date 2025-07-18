@@ -223,13 +223,6 @@ function createStandardModalHTML(standard) {
           .join("")}
       </div>
     </div>
-
-    <div class="professional-application">
-      <h3>💡 Professional Application</h3>
-      <p><strong>Certification:</strong> This standard is assessed as part of the Certified Performance Technologist (CPT) credential</p>
-      <p><strong>Practice:</strong> Demonstrates competency in real-world HPT project implementation</p>
-      <p><strong>Development:</strong> Guides professional growth and skill enhancement for HPT practitioners</p>
-    </div>
   `;
 }
 
