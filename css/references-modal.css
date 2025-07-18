@@ -1,0 +1,267 @@
+/* References Modal Styles */
+/* File: references-modal.css */
+
+/* ==================== REFERENCES BUTTON STYLES ==================== */
+.references-btn {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  margin: 0 0.5rem;
+  font-weight: 500;
+}
+
+.references-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.references-btn:focus {
+  outline: 2px solid #e74c3c;
+  outline-offset: 2px;
+}
+
+/* ==================== REFERENCES MODAL STYLES ==================== */
+.references-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.3s ease;
+}
+
+.references-modal-content {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  max-width: 90%;
+  max-height: 90%;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  width: 1000px;
+}
+
+/* ==================== MODAL HEADER ==================== */
+.references-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  border-bottom: 3px solid #e74c3c;
+  padding-bottom: 1rem;
+}
+
+.references-modal-title {
+  color: #2c3e50;
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.references-close {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.2rem;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.5rem;
+  line-height: 1;
+  transition: all 0.3s ease;
+}
+
+.references-close:hover {
+  background: #c62828;
+  transform: scale(1.1);
+}
+
+.references-close:focus {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+/* ==================== REFERENCE CATEGORIES ==================== */
+.reference-category {
+  margin-bottom: 2.5rem;
+  border: 2px solid #3498db;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.reference-category:last-child {
+  margin-bottom: 1rem;
+}
+
+.reference-category-header {
+  background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+  color: white;
+  padding: 1.5rem;
+}
+
+.reference-category-header h3 {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.reference-category-body {
+  padding: 1.5rem;
+  background: #f8f9fa;
+}
+
+/* ==================== REFERENCE ITEMS ==================== */
+.reference-item {
+  background: white;
+  padding: 1.2rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  border-left: 4px solid #3498db;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.reference-item:last-child {
+  margin-bottom: 0;
+}
+
+.reference-citation {
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+  font-size: 0.95rem;
+}
+
+.reference-description {
+  color: #555;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+}
+
+.reference-link {
+  color: #3498db;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.reference-link:hover {
+  text-decoration: underline;
+  color: #2980b9;
+}
+
+.reference-link:focus {
+  outline: 2px solid #3498db;
+  outline-offset: 1px;
+  border-radius: 2px;
+}
+
+/* ==================== SPECIAL SECTIONS ==================== */
+.references-intro {
+  background: linear-gradient(135deg, #e8f5e8 0%, #c8e6c9 100%);
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  border-left: 4px solid #4caf50;
+}
+
+.references-intro p {
+  margin: 0;
+  color: #2c3e50;
+  line-height: 1.6;
+}
+
+/* ==================== ANIMATIONS ==================== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Staggered animation for reference categories */
+.reference-category {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.reference-category.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ==================== RESPONSIVE DESIGN ==================== */
+@media (max-width: 768px) {
+  .references-modal-content {
+    width: 95%;
+    padding: 1rem;
+    max-height: 95%;
+  }
+
+  .references-modal-header {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .references-modal-title {
+    font-size: 1.4rem;
+  }
+
+  .reference-category-header {
+    padding: 1rem;
+  }
+
+  .reference-category-header h3 {
+    font-size: 1.2rem;
+  }
+
+  .reference-category-body {
+    padding: 1rem;
+  }
+
+  .reference-item {
+    padding: 1rem;
+  }
+
+  .references-btn {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .references-modal-content {
+    margin: 1rem;
+    width: calc(100% - 2rem);
+  }
+
+  .references-close {
+    padding: 0.6rem 1rem;
+    font-size: 1.2rem;
+  }
+
+  .reference-citation {
+    font-size: 0.9rem;
+  }
+
+  .reference-description {
+    font-size: 0.85rem;
+  }
+}
