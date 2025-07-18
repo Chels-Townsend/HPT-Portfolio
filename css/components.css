@@ -280,11 +280,6 @@
   padding: 1.5rem;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
   border-left: 4px solid #6c5ce7;
-  transition: transform 0.3s ease;
-}
-
-.glossary-item:hover {
-  transform: translateX(5px);
 }
 
 .glossary-term {
