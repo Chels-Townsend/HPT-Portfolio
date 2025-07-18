@@ -215,7 +215,7 @@ function createReferencesContent() {
             <div class="reference-category-body">
                 <div class="reference-item">
                     <div class="reference-citation">
-                        <em>Performance Improvement</em> - Wiley/ISPI
+                        <em>Performance Improvement</em> - Allen Press/ISPI
                     </div>
                     <div class="reference-description">
                         Official journal of ISPI, publishing research and case studies in human performance technology and organizational improvement.
@@ -225,7 +225,7 @@ function createReferencesContent() {
 
                 <div class="reference-item">
                     <div class="reference-citation">
-                        <em>Performance Improvement Quarterly</em> - Wiley/ISPI
+                        <em>Performance Improvement Quarterly</em> - Allen Press/ISPI
                     </div>
                     <div class="reference-description">
                         Peer-reviewed research journal focusing on empirical studies in performance technology and workplace learning.
@@ -233,15 +233,6 @@ function createReferencesContent() {
                     <a href="https://meridian.allenpress.com/piq" target="_blank" class="reference-link">Access Journal</a>
                 </div>
 
-                <div class="reference-item">
-                    <div class="reference-citation">
-                        <em>Educational Technology Research and Development</em> - Springer
-                    </div>
-                    <div class="reference-description">
-                        Research journal covering instructional design, educational technology, and performance improvement in educational contexts.
-                    </div>
-                    <a href="https://link.springer.com/journal/11423" target="_blank" class="reference-link">Access Journal</a>
-                </div>
             </div>
         </div>
     `;

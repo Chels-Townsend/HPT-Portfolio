@@ -10,7 +10,7 @@ const modelData = {
     overview:
       "Thomas Gilbert's Behavior Engineering Model is one of the foundational frameworks in HPT, providing a systematic approach to analyzing and improving human performance. The model is organized around six key factors that influence performance, arranged in order of their potential impact on performance improvement.",
     keyPrinciples: [
-      "Environmental factors typically have greater leverage than individual factors",
+      "Environmental factors typically have greater impact than individual factors",
       "Focus on accomplishments rather than behavior",
       "Systematic analysis prevents jumping to training solutions",
       "Cost-effectiveness through environmental interventions",
