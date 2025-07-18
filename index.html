@@ -7,19 +7,18 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <header>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="what-is-hpt.html">What is HPT</a></li>
+          <li><a href="hpt-models.html">HPT Models</a></li>
+          <li><a href="case-analysis.html">Case Analysis</a></li>
+          <li><a href="glossary.html">Glossary</a></li>
+        </ul>
+      </nav>
+    </header>
     <div class="container">
-      <header>
-        <nav>
-          <ul class="nav-links">
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="what-is-hpt.html">What is HPT</a></li>
-            <li><a href="hpt-models.html">HPT Models</a></li>
-            <li><a href="case-analysis.html">Case Analysis</a></li>
-            <li><a href="glossary.html">Glossary</a></li>
-          </ul>
-        </nav>
-      </header>
-
       <div class="content">
         <h1>Human Performance Technology Portfolio</h1>
 
@@ -175,37 +174,44 @@
           field.
         </p>
       </div>
-
-      <footer>
-        <div class="footer-content">
-          <h3>Chelsea Townsend HPT Portfolio</h3>
-          <p>
-            Dedicated to advancing Human Performance Technology through
-            systematic analysis and evidence-based interventions.
-          </p>
-
-          <div class="footer-links">
-            <a href="index.html">Home</a>
-            <a href="what-is-hpt.html">What is HPT</a>
-            <a href="hpt-models.html">HPT Models</a>
-            <a href="case-analysis.html">Case Analysis</a>
-            <a href="glossary.html">Glossary</a>
-          </div>
-
-          <div class="footer-social">
-            <a
-              href="https://www.linkedin.com/in/chelsea-townsend-29b940105/"
-              target="_blank"
-              title="LinkedIn"
-              >in</a
-            >
-            <a href="mailto:clt8560@uncw.edu" title="Email">@</a>
-          </div>
-
-          <p>&copy; 2025 HPT Professional Portfolio. All rights reserved.</p>
-        </div>
-      </footer>
     </div>
+    <footer>
+      <div class="footer-content">
+        <h3>Chelsea Townsend HPT Portfolio</h3>
+        <p>
+          Dedicated to advancing Human Performance Technology through systematic
+          analysis and evidence-based interventions.
+        </p>
+
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="what-is-hpt.html">What is HPT</a>
+          <a href="hpt-models.html">HPT Models</a>
+          <a href="case-analysis.html">Case Analysis</a>
+          <a href="glossary.html">Glossary</a>
+        </div>
+
+        <div class="footer-social">
+          <a
+            href="https://www.linkedin.com/in/chelsea-townsend-29b940105/"
+            target="_blank"
+            title="LinkedIn"
+            >in</a
+          >
+          <a href="mailto:clt8560@uncw.edu" title="Email">@</a>
+        </div>
+
+        <button
+          id="referencesBtn"
+          class="references-btn"
+          title="References & Resources"
+        >
+          References
+        </button>
+
+        <p>&copy; 2025 HPT Professional Portfolio. All rights reserved.</p>
+      </div>
+    </footer>
 
     <script src="mobile-nav.js"></script>
     <script>
@@ -228,5 +234,6 @@
         });
       });
     </script>
+    <script src="references-modal.js"></script>
   </body>
 </html>

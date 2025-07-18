@@ -7,19 +7,18 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <header>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="what-is-hpt.html" class="active">What is HPT</a></li>
+          <li><a href="hpt-models.html">HPT Models</a></li>
+          <li><a href="case-analysis.html">Case Analysis</a></li>
+          <li><a href="glossary.html">Glossary</a></li>
+        </ul>
+      </nav>
+    </header>
     <div class="container">
-      <header>
-        <nav>
-          <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="what-is-hpt.html" class="active">What is HPT</a></li>
-            <li><a href="hpt-models.html">HPT Models</a></li>
-            <li><a href="case-analysis.html">Case Analysis</a></li>
-            <li><a href="glossary.html">Glossary</a></li>
-          </ul>
-        </nav>
-      </header>
-
       <div class="content">
         <h1>What is Human Performance Technology?</h1>
 
@@ -66,7 +65,7 @@
         </p>
 
         <div class="model-grid">
-          <div class="model-card">
+          <div class="model-card-wih">
             <h3>Performance Analysis Standards</h3>
             <p>
               These standards focus on the systematic analysis of performance
@@ -77,7 +76,7 @@
             </p>
           </div>
 
-          <div class="model-card">
+          <div class="model-card-wih">
             <h3>Intervention Design Standards</h3>
             <p>
               These standards address the design and development of performance
@@ -88,7 +87,7 @@
             </p>
           </div>
 
-          <div class="model-card">
+          <div class="model-card-wih">
             <h3>Evaluation Standards</h3>
             <p>
               These standards cover the measurement and evaluation of
@@ -98,7 +97,7 @@
             </p>
           </div>
 
-          <div class="model-card">
+          <div class="model-card-wih">
             <h3>Management Standards</h3>
             <p>
               These standards address the management of HPT projects and
@@ -180,50 +179,42 @@
           </p>
         </div>
       </div>
-
-      <footer>
-        <div class="footer-content">
-          <h3>HPT Professional Portfolio</h3>
-          <p>
-            Dedicated to advancing Human Performance Technology through
-            systematic analysis and evidence-based interventions.
-          </p>
-
-          <div class="footer-links">
-            <a href="index.html">Home</a>
-            <a href="what-is-hpt.html">What is HPT</a>
-            <a href="hpt-models.html">HPT Models</a>
-            <a href="case-analysis.html">Case Analysis</a>
-            <a href="glossary.html">Glossary</a>
-          </div>
-
-          <div class="footer-social">
-            <a
-              href="https://www.linkedin.com/in/yourprofile"
-              target="_blank"
-              title="LinkedIn"
-              >in</a
-            >
-            <a
-              href="https://twitter.com/yourhandle"
-              target="_blank"
-              title="Twitter"
-              >𝕏</a
-            >
-            <a
-              href="https://www.facebook.com/yourprofile"
-              target="_blank"
-              title="Facebook"
-              >f</a
-            >
-            <a href="mailto:your.email@university.edu" title="Email">@</a>
-          </div>
-
-          <p>&copy; 2025 HPT Professional Portfolio. All rights reserved.</p>
-        </div>
-      </footer>
     </div>
+    <footer>
+      <div class="footer-content">
+        <h3>Chelsea Townsend HPT Portfolio</h3>
+        <p>
+          Dedicated to advancing Human Performance Technology through systematic
+          analysis and evidence-based interventions.
+        </p>
 
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="what-is-hpt.html">What is HPT</a>
+          <a href="hpt-models.html">HPT Models</a>
+          <a href="case-analysis.html">Case Analysis</a>
+          <a href="glossary.html">Glossary</a>
+        </div>
+
+        <div class="footer-social">
+          <a
+            href="https://www.linkedin.com/in/chelsea-townsend-29b940105/"
+            target="_blank"
+            title="LinkedIn"
+            >in</a
+          >
+          <a href="mailto:clt8560@uncw.edu" title="Email">@</a>
+        </div>
+        <button
+          id="referencesBtn"
+          class="references-btn"
+          title="References & Resources"
+        >
+          References
+        </button>
+        <p>&copy; 2025 HPT Professional Portfolio. All rights reserved.</p>
+      </div>
+    </footer>
     <script>
       // Add interactive elements to the job aid
       const jobAidSteps = document.querySelectorAll(".job-aid h3");
@@ -240,18 +231,6 @@
         // Add cursor pointer to indicate clickable
         step.style.cursor = "pointer";
         step.style.userSelect = "none";
-      });
-
-      // Add hover effects to model cards
-      const modelCards = document.querySelectorAll(".model-card");
-      modelCards.forEach((card) => {
-        card.addEventListener("mouseenter", function () {
-          this.style.transform = "translateY(-5px) scale(1.02)";
-        });
-
-        card.addEventListener("mouseleave", function () {
-          this.style.transform = "translateY(0) scale(1)";
-        });
       });
 
       // ISPI Standards Modal functionality
@@ -487,5 +466,6 @@
       });
     </script>
     <script src="mobile-nav.js"></script>
+    <script src="references-modal.js"></script>
   </body>
 </html>
