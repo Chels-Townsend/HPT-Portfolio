@@ -1,0 +1,271 @@
+/* ==================== HEADER AND NAVIGATION ==================== */
+/* File: navigation.css - All navigation-related styles */
+
+header {
+  background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+  color: white;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%; /* Ensure full width */
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px; /* This constrains the nav content, not the header */
+  margin: 0 auto; /* Center the nav content */
+  padding: 0 2rem;
+  position: relative;
+  width: 100%;
+  height: 38px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-links a:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.nav-links a.active {
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* ==================== FOOTER STYLES ==================== */
+/* File: footer.css - Footer layout and social media styles */
+
+footer {
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  color: white;
+  text-align: center;
+  padding: 2rem 0;
+  border-top: 4px solid #3498db;
+  width: 100%;
+  margin-top: auto; /* This pushes footer to bottom */
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 2rem;
+  box-sizing: border-box;
+}
+
+.footer-content h3 {
+  margin: 0 0 0.8rem 0;
+  color: #ecf0f1;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.footer-content p {
+  margin: 0.4rem 0;
+  color: #bdc3c7;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 1rem 0;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: #3498db;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+.footer-links a:hover {
+  color: #5dade2;
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  margin: 1rem 0 0.5rem 0;
+}
+
+.footer-social a {
+  width: 35px;
+  height: 35px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+.footer-social a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+/* ==================== FOOTER MOBILE RESPONSIVENESS ==================== */
+@media (max-width: 768px) {
+  footer {
+    padding: 1.5rem 0.5rem;
+  }
+
+  .footer-content {
+    padding: 0 0.5rem;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 0.8rem;
+    margin: 0.8rem 0;
+  }
+
+  .footer-social {
+    justify-content: center;
+    gap: 0.6rem;
+  }
+
+  .footer-social a {
+    width: 32px;
+    height: 32px;
+    font-size: 0.8rem;
+  }
+
+  .footer-content h3 {
+    font-size: 1rem;
+  }
+
+  .footer-content p {
+    font-size: 0.8rem;
+  }
+}
+/* ==================== HAMBURGER MENU STYLES ==================== */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 101;
+  transition: transform 0.3s ease;
+  position: absolute;
+  left: 2rem;
+  transform: translate(-50%);
+}
+
+.hamburger:hover {
+  transform: scale(1.1);
+}
+
+.hamburger-line {
+  width: 100%;
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+.hamburger.active .hamburger-line:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.hamburger.active .hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .hamburger-line:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* ==================== MOBILE NAVIGATION ==================== */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+    position: absolute;
+    left: 2rem;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    transition: left 0.3s ease;
+    z-index: 99;
+  }
+
+  .nav-links.active {
+    left: 0;
+  }
+
+  .nav-links a {
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    text-align: center;
+    width: 80%;
+    border: 2px solid transparent;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+  }
+
+  .nav-links a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px) scale(1.05);
+  }
+
+  .nav-links a.active {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.5);
+  }
+
+  nav {
+    justify-content: center;
+    padding: 0 4rem;
+  }
+}

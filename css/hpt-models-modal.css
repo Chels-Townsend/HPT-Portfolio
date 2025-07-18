@@ -1,0 +1,357 @@
+/* HPT Models Modal Styles */
+/* File: hpt-models-modal.css */
+
+/* ==================== MODAL BASE STYLES ==================== */
+.hpt-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.3s ease;
+}
+
+.hpt-modal-content {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  max-width: 90%;
+  max-height: 90%;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  width: 1200px;
+}
+
+/* ==================== MODAL HEADER ==================== */
+.hpt-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  border-bottom: 3px solid #3498db;
+  padding-bottom: 1rem;
+}
+
+.hpt-modal-title {
+  color: #2c3e50;
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.hpt-modal-subtitle {
+  margin: 0.5rem 0 0 0;
+  color: #666;
+  font-style: italic;
+}
+
+.hpt-modal-close {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.2rem;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.5rem;
+  line-height: 1;
+  transition: all 0.3s ease;
+}
+
+.hpt-modal-close:hover {
+  background: #c62828;
+  transform: scale(1.1);
+}
+
+/* ==================== MODAL SECTIONS ==================== */
+.hpt-modal-overview {
+  margin-bottom: 2rem;
+  background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+.hpt-modal-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.hpt-modal-section {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+.hpt-modal-section h3 {
+  color: #2c3e50;
+  margin-top: 0;
+}
+
+.hpt-modal-section ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.hpt-modal-section li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+/* ==================== MODEL COMPONENTS ==================== */
+.hpt-model-components {
+  margin-bottom: 2rem;
+}
+
+.hpt-model-components h3 {
+  color: #2c3e50;
+}
+
+.hpt-component-category {
+  margin-bottom: 2rem;
+  overflow: hidden;
+}
+
+.hpt-component-header {
+  background: linear-gradient(135deg, #4caf50 0%, #66bb6a 100%);
+  color: white;
+  padding: 1rem;
+  border-radius: 10px 10px 0 0;
+}
+
+.hpt-component-header h4 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.hpt-component-body {
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 0 0 10px 10px;
+}
+
+.hpt-component-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.hpt-component-item {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hpt-component-item h5 {
+  color: #2c3e50;
+  margin: 0 0 0.5rem 0;
+}
+
+.hpt-component-item p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.4;
+}
+
+/* ==================== STRENGTHS & LIMITATIONS ==================== */
+.hpt-strengths {
+  background: linear-gradient(135deg, #e8f5e8 0%, #c8e6c9 100%);
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+.hpt-limitations {
+  background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+.hpt-strengths h3,
+.hpt-limitations h3 {
+  color: #2c3e50;
+  margin-top: 0;
+}
+
+.hpt-strengths ul,
+.hpt-limitations ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.hpt-strengths li,
+.hpt-limitations li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+/* ==================== PRACTICAL EXAMPLE ==================== */
+.hpt-practical-example {
+  background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%);
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+.hpt-practical-example h3 {
+  color: #2c3e50;
+  margin-top: 0;
+}
+
+.hpt-practical-example p {
+  margin-bottom: 0;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+/* ==================== COMPARISON MODAL ==================== */
+.hpt-comparison-content {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  max-width: 95%;
+  max-height: 90%;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.hpt-comparison-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 1rem;
+}
+
+.hpt-comparison-header h2 {
+  color: #2c3e50;
+  margin: 0;
+}
+
+.hpt-comparison-table-container {
+  overflow-x: auto;
+}
+
+.hpt-comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+}
+
+.hpt-comparison-table thead tr {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.hpt-comparison-table th,
+.hpt-comparison-table td {
+  padding: 1rem;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.hpt-comparison-table tbody tr {
+  border-bottom: 1px solid #eee;
+}
+
+.hpt-comparison-table td:first-child {
+  font-weight: bold;
+  background: #f8f9fa;
+}
+
+.hpt-selection-guide {
+  background: linear-gradient(135deg, #e8f5e8 0%, #c8e6c9 100%);
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-top: 2rem;
+}
+
+.hpt-selection-guide h3 {
+  color: #2c3e50;
+  margin-top: 0;
+}
+
+.hpt-selection-guide p {
+  margin-bottom: 0.5rem;
+}
+
+.hpt-selection-guide p:last-child {
+  margin-bottom: 0;
+}
+
+/* ==================== ANIMATIONS ==================== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ==================== RESPONSIVE DESIGN ==================== */
+@media (max-width: 768px) {
+  .hpt-modal-content {
+    width: 95%;
+    padding: 1rem;
+    max-height: 95%;
+  }
+
+  .hpt-comparison-content {
+    width: 95%;
+    padding: 1rem;
+    max-height: 95%;
+  }
+
+  .hpt-modal-header {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .hpt-modal-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .hpt-component-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hpt-modal-title {
+    font-size: 1.4rem;
+  }
+
+  .hpt-comparison-table {
+    font-size: 0.9rem;
+  }
+
+  .hpt-comparison-table th,
+  .hpt-comparison-table td {
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hpt-modal-content {
+    margin: 1rem;
+    width: calc(100% - 2rem);
+  }
+
+  .hpt-comparison-content {
+    margin: 1rem;
+    width: calc(100% - 2rem);
+  }
+
+  .hpt-modal-close {
+    padding: 0.6rem 1rem;
+    font-size: 1.2rem;
+  }
+}
