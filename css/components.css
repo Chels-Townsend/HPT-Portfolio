@@ -341,18 +341,6 @@
   transition: all 0.3s ease;
 }
 
-.model-button .model-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, #3498db, #667eea, #764ba2);
-  transform: translateX(-100%);
-  transition: transform 0.3s ease;
-}
-
 .model-button:hover .model-card::before {
   transform: translateX(0);
 }
