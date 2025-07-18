@@ -115,14 +115,6 @@ function createReferencesContent() {
                     <a href="https://www.ispi.org" target="_blank" class="reference-link">Visit ISPI Website</a>
                 </div>
 
-                <div class="reference-item">
-                    <div class="reference-citation">
-                        ISPI. (2012). <em>Performance Technology Standards</em>. International Society for Performance Improvement.
-                    </div>
-                    <div class="reference-description">
-                        Official standards defining competencies and practices for HPT professionals, covering analysis, design, evaluation, and management.
-                    </div>
-                </div>
 
                 <div class="reference-item">
                     <div class="reference-citation">
@@ -142,9 +134,17 @@ function createReferencesContent() {
                 <h3>Case Studies & Applied Research</h3>
             </div>
             <div class="reference-category-body">
+                            <div class="reference-item">
+                    <div class="reference-citation">
+                        Wilmoth, F. S., Prigmore, C., & Bray, M. (2010) HPT Models: An Overview of the Major Models in the Field. <em>Handbook of Performance in the Workplace, Volume 2</em>, 5-25.
+                    </div>
+                    <div class="reference-description">
+                        Comprehensive overview of the primary HPT models used in the field, providing practitioners with guidance on selecting and applying appropriate frameworks for performance improvement initiatives.
+                    </div>
+                </div>
                 <div class="reference-item">
                     <div class="reference-citation">
-                        Kara, M., & Yildirim, Z. (2019). Barriers to performance of distance education faculty: A front-end analysis study. <em>Turkish Online Journal of Distance Education</em>, 20(2), 80-98.
+                        Kara, M., & Yildirim, Z. (2021). Faculty Performance Improvement in Distance Education: Causes of the Performance Deficiencies (Part I) <em>Performance Improvement Quarterly</em>, 34(4), 573-601.
                     </div>
                     <div class="reference-description">
                         Application of Wile's E-T model to analyze performance barriers in distance education, demonstrating systematic front-end analysis methodology.
@@ -153,7 +153,7 @@ function createReferencesContent() {
 
                 <div class="reference-item">
                     <div class="reference-citation">
-                        Swart, W., & Kaufman, R. (2012). Converting faculty perceptions into useful performance data: An academic needs assessment survey for faculty performance improvement. <em>Performance Improvement</em>, 51(9), 32-41.
+                        Swart, W., & Kaufman, R. (2009). Developing Performance Data for Making Useful Faculty and Leadership Decisions: Needs Assessment as a Vehicle. <em>Performance Improvement Quarterly</em>, 22(3), 71-82.
                     </div>
                     <div class="reference-description">
                         Methodology for converting qualitative faculty perceptions into quantitative performance data for evidence-based academic improvement.
@@ -162,12 +162,13 @@ function createReferencesContent() {
 
                 <div class="reference-item">
                     <div class="reference-citation">
-                        Van Tiem, D. M., Moseley, J. L., & Dessinger, J. C. (2012). <em>Fundamentals of Performance Technology: A Guide to Improving People, Process, and Performance</em> (3rd ed.). Pfeiffer.
+                        Van Tiem, D. M., Moseley, J. L., & Dessinger, J. C. (2004). <em>Fundamentals of Performance Technology: A Guide to Improving People, Process, and Performance</em> (2nd ed.). Pfeiffer. Chpt 2, 6-17.
                     </div>
                     <div class="reference-description">
                         Practical guide covering HPT fundamentals with real-world case studies and implementation strategies.
                     </div>
                 </div>
+                
             </div>
         </div>
 
@@ -219,7 +220,7 @@ function createReferencesContent() {
                     <div class="reference-description">
                         Official journal of ISPI, publishing research and case studies in human performance technology and organizational improvement.
                     </div>
-                    <a href="https://onlinelibrary.wiley.com/journal/19308337" target="_blank" class="reference-link">Access Journal</a>
+                    <a href="https://meridian.allenpress.com/pfi" target="_blank" class="reference-link">Access Journal</a>
                 </div>
 
                 <div class="reference-item">
@@ -229,7 +230,7 @@ function createReferencesContent() {
                     <div class="reference-description">
                         Peer-reviewed research journal focusing on empirical studies in performance technology and workplace learning.
                     </div>
-                    <a href="https://onlinelibrary.wiley.com/journal/19388327" target="_blank" class="reference-link">Access Journal</a>
+                    <a href="https://meridian.allenpress.com/piq" target="_blank" class="reference-link">Access Journal</a>
                 </div>
 
                 <div class="reference-item">
