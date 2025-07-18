@@ -201,12 +201,6 @@ function createStandardModalHTML(standard) {
       <h2 class="standard-modal-title">${standard.title}</h2>
       <button class="standard-modal-close" aria-label="Close modal">×</button>
     </div>
-    
-    <div class="standard-intro">
-      <p>
-        This standard defines the core competencies and knowledge areas that HPT practitioners must demonstrate to ensure effective performance improvement practices.
-      </p>
-    </div>
 
     <div class="standard-components">
       <h3>Core Components</h3>
