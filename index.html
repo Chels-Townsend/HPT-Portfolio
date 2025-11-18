@@ -3,223 +3,212 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chelsea Townsend Portfolio</title>
-    <link rel="stylesheet" href="css/main.css" />
-    <link rel="stylesheet" href="css/cursor-states.css" />
-    <link
-      rel="icon"
-      type="images/png"
-      href="images/CT LOGO DARK w background.png"
-    />
+    <title>HPT Professional Portfolio - Home</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <!-- Modified header component -->
-    <header class="site-header">
-      <div class="container">
-        <nav>
-          <div class="logo">
-            <div class="logo-content">
-              <img
-                src="images/CT LOGO 16x16.svg"
-                alt="Chelsea Townsend Logo"
-                width="52"
-                height="52"
-              />
-              <a href="index.html" class="contact-info__link">
-                Chelsea Townsend
-              </a>
-            </div>
-          </div>
-
-          <!-- Hamburger Menu Button -->
-          <button
-            class="mobile-menu-toggle"
-            aria-label="Toggle navigation menu"
-          >
-            <span class="hamburger-icon"></span>
-          </button>
-
-          <!-- Nav Links with mobile-nav ID -->
-          <div class="nav-links" id="mobile-nav">
-            <a href="index.html" class="active">Home</a>
-            <a href="about.html">About</a>
-            <a href="works.html">Works</a>
-            <a href="contact.html">Contact</a>
-          </div>
-        </nav>
-      </div>
+    <header>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="what-is-hpt.html">What is HPT</a></li>
+          <li><a href="hpt-models.html">HPT Models</a></li>
+          <li><a href="case-analysis.html">Case Analysis</a></li>
+          <li><a href="glossary.html">Glossary</a></li>
+        </ul>
+      </nav>
     </header>
+    <div class="container">
+      <div class="content">
+        <h1>All About Human Performance Technology</h1>
 
-    <main>
-      <!-- Hero Banner Component -->
-      <section class="hero">
-        <div class="container">
-          <div class="hero__content">
-            <h1 class="hero__title">
-              Transforming Education Through Instructional Technology
-            </h1>
-            <p class="hero__description">
-              Creating engaging e-learning experiences and researching
-              innovative technology in education
-            </p>
-            <a href="works.html" class="btn btn--primary">View My Work</a>
-          </div>
-        </div>
-      </section>
-
-      <!-- Featured Projects Component -->
-      <section id="featured-projects" class="section">
-        <div class="container">
-          <div class="section-header">
-            <h2 class="section-title">Featured Projects</h2>
-          </div>
-
-          <div class="card-grid card-grid--scrollable">
-            <!-- Project Card Component -->
-            <article class="project-card" data-project-id="meddpicc-detective">
-              <div class="project-card__image">
-                <img
-                  src="./images/mdhome.jpg"
-                  alt="MEDDPICC Detective Home Page"
-                />
-              </div>
-              <!-- Content populated by JavaScript project-data -->
-              <div class="project-card__content">
-                <h3 class="project-card__title"></h3>
-                <p class="project-card__description"></p>
-                <div class="tag-container"></div>
-              </div>
-            </article>
-            <!-- Project Card Component -->
-            <article class="project-card" data-project-id="financial-literacy">
-              <div class="project-card__image">
-                <img
-                  src="./images/growing money.jpg"
-                  alt="Growing money plant illustration"
-                />
-              </div>
-              <div class="project-card__content">
-                <h3 class="project-card__title"></h3>
-                <p class="project-card__description"></p>
-                <div class="tag-container"></div>
-              </div>
-            </article>
-            <!-- Project Card Component -->
-            <article class="project-card" data-project-id="time-game">
-              <div class="project-card__image">
-                <img src="./images/TimeGame.jpg" alt="Time Game Placeholder" />
-              </div>
-              <!-- Content populated by JavaScript project-data -->
-              <div class="project-card__content">
-                <h3 class="project-card__title"></h3>
-                <p class="project-card__description"></p>
-                <div class="tag-container"></div>
-              </div>
-            </article>
-
-            <!-- Project Card Component -->
-            <article class="project-card" data-project-id="sales-quest">
-              <div class="project-card__image">
-                <img src="./images/office.jpg" alt="Sales Quest job aid" />
-              </div>
-              <!-- Content populated by JavaScript project-data -->
-              <div class="project-card__content">
-                <h3 class="project-card__title"></h3>
-                <p class="project-card__description"></p>
-                <div class="tag-container"></div>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- About Preview Component -->
-      <section id="about-preview" class="section">
-        <div class="container">
-          <div class="section-header">
-            <h2 class="section-title">About Me</h2>
-          </div>
-
-          <div class="profile-preview">
-            <div class="profile-preview__image">
-              <img
-                src="images/Chelsea Profile.jpg"
-                alt="Chelsea Townsend profile photo"
-                class="profile-img"
-              />
-            </div>
-            <div class="profile-preview__content">
-              <h3>Passionate about Educational Innovation</h3>
+        <div class="profile-section">
+          <div class="profile-image">
+            <img
+              src="photos/Chelsea Headshot.png"
+              alt="Chelsea Townsend Profile Photo"
+            />
+            <!-- Contact information moved here under the profile picture -->
+            <div class="contact-info">
+              <h3>Professional Contact Information</h3>
               <p>
-                I am an instructional technology specialist with expertise in
-                designing and developing effective e-learning experiences. My
-                research focuses on how technology can enhance learning outcomes
-                and engagement in educational settings.
-              </p>
-              <p>
-                With a background in both education and technology, I bridge the
-                gap between pedagogical theory and practical implementation,
-                creating learning solutions that truly make a difference.
-              </p>
-              <div class="button-group">
-                <a href="about.html" class="btn btn--primary"
-                  >Learn More About Me</a
+                <strong>Email:</strong>
+                <a href="mailto:clt8560@uncw.edu" class="contact-info-link"
+                  >clt8560@uncw.edu</a
                 >
-                <a href="contact.html" class="btn btn--secondary">Contact Me</a>
-              </div>
+              </p>
+              <p><strong>Contact me on LinkedIn:</strong></p>
 
-              <div class="tag-container">
-                <span class="tag">Instructional Design</span>
-                <span class="tag">E-Learning Development</span>
-                <span class="tag">Educational Research</span>
-                <span class="tag">UX Design</span>
-                <span class="tag">Learning Analytics</span>
+              <div class="social-links">
+                <a
+                  href="https://www.linkedin.com/in/chelsea-townsend-29b940105/"
+                  target="_blank"
+                  title="LinkedIn - Professional Network"
+                >
+                  <span>in</span>
+                </a>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-    </main>
-
-    <!-- Footer Component -->
-    <footer class="site-footer">
-      <div class="container">
-        <div class="site-footer__content">
-          <p>&copy; 2025 Chelsea Townsend Portfolio</p>
-          <div class="social-links">
-            <a
-              href="https://www.linkedin.com/in/chelsea-townsend-29b940105/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn Profile"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path
-                  d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
-                ></path>
-                <rect x="2" y="9" width="4" height="12"></rect>
-                <circle cx="4" cy="4" r="2"></circle>
-              </svg>
-            </a>
+          <div class="profile-content">
+            <h2>Welcome to My HPT Portfolio</h2>
+            <p>
+              Welcome students, scholars, and professionals, to the All About
+              HPT portfolio website, a site dedicated to the field of Human
+              Performance Technology.
+            </p>
+            <p>
+              HPT provides the scientific basis for identifying and developing
+              improvement at the individual and organizational level. We can all
+              strive to be better than yesterday, and HPT gives us the tools and
+              resources to plan, organize, and enact positive change.
+            </p>
+            <p>
+              My personal interest in technology in education is further driven
+              by the idea that technology can have a positive impact inside and
+              outside of the classroom. Together, let's discover how emerging
+              technologies can advance human performance in academic and
+              professional settings!
+            </p>
           </div>
         </div>
+
+        <div class="highlight-box">
+          <h3>What HPT Means to Me</h3>
+          <p>
+            To me, Human Performance Technology studies the intersection of
+            work, knowledge, and motivation, and the ways that we can affect
+            these disciplines. HPT frameworks give us the ability to understand
+            performance holistically by considering the internal and external
+            factors that influence behaviors and outcomes.
+          </p>
+        </div>
+
+        <h2>About This Website and Its Purpose</h2>
+        <p>
+          This portfolio website serves as a comprehensive resource for
+          understanding Human Performance Technology and its applications. The
+          site was developed as part of my academic coursework and professional
+          development in HPT, designed to serve students, scholars, and
+          professionals interested in exploring this dynamic field.
+        </p>
+
+        <p>
+          The website is organized into four main sections, each addressing key
+          aspects of HPT knowledge and practice:
+        </p>
+
+        <div class="model-grid">
+          <a href="what-is-hpt.html" class="model-card-link">
+            <div class="model-card">
+              <h3>What is HPT</h3>
+              <p>
+                Provides foundational knowledge about Human Performance
+                Technology, including comprehensive definitions, information
+                about ISPI (International Society for Performance Improvement),
+                professional standards, and a practical job aid for performance
+                analysis processes.
+              </p>
+            </div>
+          </a>
+
+          <a href="hpt-models.html" class="model-card-link">
+            <div class="model-card">
+              <h3>HPT Models</h3>
+              <p>
+                Explores the theoretical frameworks that guide HPT practice,
+                including detailed explanations of Gilbert's Behavior
+                Engineering Model, Rummler-Brache Performance Model, and
+                additional models, all described in original language with
+                practical applications.
+              </p>
+            </div>
+          </a>
+
+          <a href="case-analysis.html" class="model-card-link">
+            <div class="model-card">
+              <h3>Case Analysis</h3>
+              <p>
+                Demonstrates practical applications of HPT through real-world
+                case studies, showcasing systematic analysis processes,
+                intervention design, and measurable results, along with personal
+                reflections on the value of case-based learning.
+              </p>
+            </div>
+          </a>
+
+          <a href="glossary.html" class="model-card-link">
+            <div class="model-card">
+              <h3>Glossary</h3>
+              <p>
+                Serves as a comprehensive reference for essential HPT
+                terminology, featuring 20 key concepts and definitions that form
+                the foundation of professional HPT practice and communication.
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="footer-content">
+        <h3>Chelsea Townsend HPT Portfolio</h3>
+        <p>
+          Dedicated to advancing Human Performance Technology through systematic
+          analysis and evidence-based interventions.
+        </p>
+
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="what-is-hpt.html">What is HPT</a>
+          <a href="hpt-models.html">HPT Models</a>
+          <a href="case-analysis.html">Case Analysis</a>
+          <a href="glossary.html">Glossary</a>
+        </div>
+
+        <div class="footer-social">
+          <a
+            href="https://www.linkedin.com/in/chelsea-townsend-29b940105/"
+            target="_blank"
+            title="LinkedIn"
+            >in</a
+          >
+          <a href="mailto:clt8560@uncw.edu" title="Email">@</a>
+        </div>
+
+        <button
+          id="referencesBtn"
+          class="references-btn"
+          title="References & Resources"
+        >
+          References
+        </button>
+
+        <p>&copy; 2025 HPT Professional Portfolio. All rights reserved.</p>
       </div>
     </footer>
 
-    <!-- JavaScript files -->
-    <script src="js/project-data.js"></script>
-    <script src="js/project-modal.js"></script>
-    <!-- Mobile menu script must be placed here -->
-    <script src="js/mobile-menu.js"></script>
+    <script src="mobile-nav.js"></script>
+    <script>
+      // Add some interactive elements
+      const socialLinks = document.querySelectorAll(".social-links a");
+      const statCards = document.querySelectorAll(".stat-card");
+
+      profileImage.addEventListener("mouseleave", function () {
+        this.style.transform = "scale(1)";
+      });
+
+      // Social links hover effects
+      socialLinks.forEach((link) => {
+        link.addEventListener("mouseenter", function () {
+          this.style.transform = "translateY(-3px) scale(1.1)";
+        });
+
+        link.addEventListener("mouseleave", function () {
+          this.style.transform = "translateY(0) scale(1)";
+        });
+      });
+    </script>
+    <script src="references-modal.js"></script>
   </body>
 </html>
